@@ -1,0 +1,8 @@
+default:
+  autoload:
+    '': %paths.base%/features
+
+  extensions:
+    AndreyOrs\PhpSpec\BehatBootstrap\Loader:
+      bootstrap:
+        - rm -f phpspec.yml
