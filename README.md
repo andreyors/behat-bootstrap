@@ -6,7 +6,7 @@
 *Configuration*
 ```  
 extensions:
-    AndreyOrs\PhpSpec\BehatBootstrap\Loader:
+    AndreyOrs\BehatBootstrap\Loader:
       bootstrap:
         - bin/console cache:clear
         - bin/console cache:warmup

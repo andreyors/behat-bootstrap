@@ -1,6 +1,6 @@
 <?php
 
-namespace AndreyOrs\PhpSpec\BehatBootstrap;
+namespace AndreyOrs\BehatBootstrap;
 
 use Behat\Testwork\ServiceContainer\Extension;
 use Behat\Testwork\ServiceContainer\ExtensionManager;

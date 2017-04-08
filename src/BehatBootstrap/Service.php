@@ -1,6 +1,6 @@
 <?php
 
-namespace AndreyOrs\PhpSpec\BehatBootstrap;
+namespace AndreyOrs\BehatBootstrap;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 
