@@ -1,5 +1,12 @@
-.idea
+# Mac
 .DS_Store
 
+# PHPStorm
+.idea
+
+# Codecov
+clover.xml
+
+# Composer
 vendor/
 composer.lock
