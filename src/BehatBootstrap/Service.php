@@ -6,13 +6,18 @@ use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 
 class Service
 {
-    const KEY = 'bootstrap';
+    const CONFIGURATION_KEY = 'bootstrap';
 
+    /**
+     * @param ArrayNodeDefinition $definition
+     *
+     * @throws \RuntimeException
+     */
     public function configure(ArrayNodeDefinition $definition)
     {
         $definition
             ->children()
-                ->arrayNode(self::KEY)
+                ->arrayNode(self::CONFIGURATION_KEY)
                     ->prototype('array')
                         ->beforeNormalization()
                         ->ifString()
@@ -41,11 +46,11 @@ class Service
      */
     public function load(array $config)
     {
-        if (empty($config[self::KEY])) {
+        if (empty($config[self::CONFIGURATION_KEY])) {
             return;
         }
 
-        foreach ($config[self::KEY] as $cmd) {
+        foreach ($config[self::CONFIGURATION_KEY] as $cmd) {
             shell_exec($cmd['command']);
         }
     }

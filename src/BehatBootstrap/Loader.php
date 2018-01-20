@@ -31,7 +31,7 @@ class Loader implements Extension
     /**
      * Setups configuration for the extension.
      *
-     * @param ArrayNodeDefinition $builder
+     * @param ArrayNodeDefinition $definition
      */
     public function configure(ArrayNodeDefinition $definition)
     {
@@ -40,11 +40,12 @@ class Loader implements Extension
 
     /**
      * Returns the extension config key.
+     *
      * @return string
      */
     public function getConfigKey()
     {
-        return Service::KEY;
+        return Service::CONFIGURATION_KEY;
     }
 
     /**
