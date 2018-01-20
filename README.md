@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/andreyors/behat-bootstrap/v/stable)](https://packagist.org/packages/andreyors/behat-bootstrap)
 [![Build Status](https://travis-ci.org/andreyors/behat-bootstrap.svg?branch=master)](https://travis-ci.org/andreyors/behat-bootstrap)
 [![Total Downloads](https://poser.pugx.org/andreyors/behat-bootstrap/downloads)](https://packagist.org/packages/andreyors/behat-bootstrap)
-[![Coverage Status](https://coveralls.io/repos/github/andreyors/behat-bootstrap/badge.svg?branch=master)](https://coveralls.io/github/andreyors/behat-bootstrap?branch=master)
+[![codecov](https://codecov.io/gh/andreyors/behat-bootstrap/branch/master/graph/badge.svg)](https://codecov.io/gh/andreyors/behat-bootstrap)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
