@@ -1,5 +1,12 @@
 language: php
 
+git:
+  depth: 3
+  submodules: false
+
+matrix:
+  fast_finish: true
+  
 php:
   - 5.6
   - 7.0
