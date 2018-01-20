@@ -21,10 +21,12 @@ class Loader implements Extension
 
     /**
      * @param ContainerBuilder $container
-     * @param array            $params
+     * @param array $params
      */
-    public function load(ContainerBuilder $container, array $params)
-    {
+    public function load(
+        ContainerBuilder $container,
+        array $params
+    ) {
         $this->service->load($params);
     }
 
