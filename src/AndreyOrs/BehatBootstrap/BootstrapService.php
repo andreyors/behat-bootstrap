@@ -11,6 +11,8 @@ class BootstrapService {
      * @param ArrayNodeDefinition $definition
      *
      * @throws \RuntimeException
+     *
+     * @codeCoverageIgnore
      */
     public function configure(ArrayNodeDefinition $definition)
     {
@@ -53,7 +55,11 @@ class BootstrapService {
         }
 
         foreach ($commands as $cmd) {
-            shell_exec($cmd['command']);
+            $cmd = \array_key_exists('command', $cmd) ? $cmd['command'] : false;
+
+            if ($cmd) {
+                shell_exec($cmd);
+            }
         }
 
         return true;

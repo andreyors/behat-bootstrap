@@ -22,6 +22,8 @@ class Loader implements Extension
     /**
      * @param ContainerBuilder $container
      * @param array $params
+     *
+     * @codeCoverageIgnore
      */
     public function load(
         ContainerBuilder $container,
@@ -34,6 +36,8 @@ class Loader implements Extension
      * Setups configuration for the extension.
      *
      * @param ArrayNodeDefinition $definition
+     *
+     * @codeCoverageIgnore
      */
     public function configure(ArrayNodeDefinition $definition)
     {
@@ -54,6 +58,8 @@ class Loader implements Extension
      * You can modify the container here before it is dumped to PHP code.
      *
      * @param ContainerBuilder $container
+     *
+     * @codeCoverageIgnore
      */
     public function process(ContainerBuilder $container)
     {
@@ -67,6 +73,8 @@ class Loader implements Extension
      * extension point.
      *
      * @param ExtensionManager $extensionManager
+     *
+     * @codeCoverageIgnore
      */
     public function initialize(ExtensionManager $extensionManager)
     {

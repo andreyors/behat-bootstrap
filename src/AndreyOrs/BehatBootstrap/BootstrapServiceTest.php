@@ -26,4 +26,41 @@ class BootstrapServiceTest extends \PHPUnit\Framework\TestCase
             $this->service->load([])
         );
     }
+
+    /**
+     * @test
+     */
+    public function itShouldSkipWithWrongKey()
+    {
+        self::assertFalse(
+            $this->service->load(['wrong-key' => []])
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldSkipWithCorrectButEmptyKey()
+    {
+        self::assertFalse(
+            $this->service->load([BootstrapService::CONFIGURATION_KEY => []])
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldSkipWithCorrectKeyWithWrongValue()
+    {
+        self::assertTrue(
+            $this->service->load([
+                BootstrapService::CONFIGURATION_KEY => [
+                    [
+                        'wrong-key' => 'ls -la',
+                    ]
+                ]
+            ])
+        );
+    }
+
 }

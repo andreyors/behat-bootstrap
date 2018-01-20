@@ -22,4 +22,14 @@
             <directory>src/</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+                <file>src/bootstrap.php</file>
+                <directory suffix="Test.php">src/*/*</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
