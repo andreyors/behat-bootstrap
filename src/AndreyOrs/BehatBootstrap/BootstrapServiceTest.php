@@ -2,12 +2,10 @@
 
 namespace AndreyOrs\BehatBootstrap;
 
-use \PHPUnit\Framework\TestCase;
-
-class ServiceTest extends TestCase
+class BootstrapServiceTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @var Service
+     * @var BootstrapService
      */
     private $service;
 
@@ -16,7 +14,7 @@ class ServiceTest extends TestCase
      */
     public function setUp()
     {
-        $this->service = new Service();
+        $this->service = new BootstrapService();
     }
 
     /**
@@ -24,6 +22,8 @@ class ServiceTest extends TestCase
      */
     public function itShouldSkipEmptyCommands()
     {
-        self::assertNull($this->service->load([]));
+        self::assertFalse(
+            $this->service->load([])
+        );
     }
 }

@@ -2,10 +2,9 @@
 
 namespace AndreyOrs\BehatBootstrap;
 
-use \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 
-class Service
-{
+class BootstrapService {
     const CONFIGURATION_KEY = 'bootstrap';
 
     /**
@@ -41,17 +40,22 @@ class Service
      * Include configured bootstrap file.
      *
      * @param array $config
+     * @return bool
      */
     public function load(array $config)
     {
-        $commands = \array_key_exists(self::CONFIGURATION_KEY, $config) ? $config[self::CONFIGURATION_KEY] : [];
+        $commands = \array_key_exists(self::CONFIGURATION_KEY, $config)
+            ? $config[self::CONFIGURATION_KEY]
+            : [];
 
         if (empty($commands)) {
-            return;
+            return false;
         }
 
         foreach ($commands as $cmd) {
             shell_exec($cmd['command']);
         }
+
+        return true;
     }
 }

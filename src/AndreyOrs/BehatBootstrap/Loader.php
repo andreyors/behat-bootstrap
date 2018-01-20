@@ -10,13 +10,13 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 class Loader implements Extension
 {
     /**
-     * @var Service
+     * @var BootstrapService
      */
     private $service;
 
     public function __construct()
     {
-        $this->service = new Service();
+        $this->service = new \AndreyOrs\BehatBootstrap\BootstrapService();
     }
 
     /**
@@ -47,7 +47,7 @@ class Loader implements Extension
      */
     public function getConfigKey()
     {
-        return Service::CONFIGURATION_KEY;
+        return BootstrapService::CONFIGURATION_KEY;
     }
 
     /**

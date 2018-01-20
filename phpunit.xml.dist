@@ -11,23 +11,15 @@
          stopOnFailure="false"
          syntaxCheck="false"
          verbose="true"
-         strict="true">
+         strict="true"
+         bootstrap="src/bootstrap.php">
     <php>
         <ini name="error_reporting" value="-1" />
     </php>
 
     <testsuites>
         <testsuite name="Library Test Suite">
-            <directory>src</directory>
+            <directory>src/</directory>
         </testsuite>
     </testsuites>
-
-    <filter>
-        <whitelist>
-            <directory>src</directory>
-            <exclude>
-                <directory>src/*/Tests</directory>
-            </exclude>
-        </whitelist>
-    </filter>
 </phpunit>
