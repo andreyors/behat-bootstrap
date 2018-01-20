@@ -1,8 +1,9 @@
 {
     "name": "andreyors/behat-bootstrap",
-    "description": "Behat bootstrap command",
+    "description": "Behat bootstrap extension",
     "type": "library",
     "require": {
+	"php": "^5.6.0||^7.0"
         "behat/behat": "^3.3"
     },
     "autoload": {
