@@ -20,18 +20,16 @@ class Service
                 ->arrayNode(self::CONFIGURATION_KEY)
                     ->prototype('array')
                         ->beforeNormalization()
-                        ->ifString()
-                        ->then(
-                            function ($v) {
-                                return [
-                                    'command' => $v,
-                                ];
-                            }
-                        )
+                            ->ifString()
+                                ->then(function ($v) {
+                                    return [
+                                        'command' => $v,
+                                    ];
+                                })
                     ->end()
-                        ->children()
-                            ->scalarNode('command')
-                                ->isRequired()
+                    ->children()
+                        ->scalarNode('command')
+                            ->isRequired()
                             ->end()
                         ->end()
                     ->end()
@@ -46,11 +44,13 @@ class Service
      */
     public function load(array $config)
     {
-        if (empty($config[self::CONFIGURATION_KEY])) {
+        $commands = \array_key_exists(self::CONFIGURATION_KEY, $config) ? $config[self::CONFIGURATION_KEY] : [];
+
+        if (empty($commands)) {
             return;
         }
 
-        foreach ($config[self::CONFIGURATION_KEY] as $cmd) {
+        foreach ($commands as $cmd) {
             shell_exec($cmd['command']);
         }
     }
