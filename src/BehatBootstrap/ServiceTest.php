@@ -1,8 +1,7 @@
 <?php
 
-namespace AndreyOrs\BehatBootstrap\Tests;
+namespace AndreyOrs\BehatBootstrap;
 
-use AndreyOrs\BehatBootstrap\Service;
 use \PHPUnit\Framework\TestCase;
 
 class ServiceTest extends TestCase
