@@ -5,7 +5,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "AndreyOrs\\BehatBootstrap": "src/BehatBootstrap/"
+      "AndreyOrs\\BehatBootstrap\\": "src/BehatBootstrap/"
     }
   },
   "require": {
