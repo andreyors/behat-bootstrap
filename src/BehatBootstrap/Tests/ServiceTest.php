@@ -1,6 +1,6 @@
 <?php
 
-namespace AndreyOrs\Tests\BehatBootstrap;
+namespace AndreyOrs\BehatBootstrap\Tests;
 
 use AndreyOrs\BehatBootstrap\Service;
 use PHPUnit\Framework\TestCase;
