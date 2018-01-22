@@ -11,11 +11,6 @@ php:
   - 5.6
   - 7.0
 
-env:
-  matrix:
-    - PREFER_LOWEST="--prefer-lowest --prefer-stable"
-    - PREFER_LOWEST=""
-
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update $PREFER_LOWEST
@@ -29,5 +24,8 @@ notifications:
   email: false
 
 env:
+  matrix:
+    - PREFER_LOWEST="--prefer-lowest --prefer-stable"
+    - PREFER_LOWEST=""
   global:
     secure: "M9+plM9Q6TjB2H/jbzctUR8RnyFdrFdo8g87Yq3bAObTjezTOwzYD/T+ml0sP+UL17V1phRtxJZIgqD/RI/zgzIbO2NpQRxtQwRPlIRD6cAkto5G/aKW89PoKCVP6GMD/bXoDbcPYzPG8MgyYiEohaMbJ6cCo+SGtL1/wo8y0i9cMlT4t3/G7tidFl33Y46A9eqCHB57pM2+aLN62jWd0rGBLx2onDzE78FSFzQ4fynrGzs9KuHj7a0gWbRb5dTonaEt5WzGUYZcr0LrrpaI1XUCocsGGFSS2aHUAMpD1MMiCiLiWJjpQf9GZwFIsitJZ9ndTl/B+Xld7ukK7oJMHPKZPz11OnOQHzh5zkaxp3fY4v9YjuDpAE1Kx3dP8FAkDJeELXMbiTvm5nrfEKGuK7Ymwlr0GZchG8Ut9xHhQNd+NnqujPIf0kEdbSFjg+QLWw36wyHPYBv/TeJHRG0mw+B//CMbeVAnemnW3sHgAylUXmRaczRNlA3qxo6DdPumtlPGbwjK0XdQXGarZzxntXas5iVR1x1ia7TFAWbJyWVm1qcwLqyWRji5W5+CZ5ykSed4JpjCIhVHXSRLEmZwqiCoASTRp27qkNQVKVSQr6RyXrZ/6XYlV0VZnTZ5+oT4RcyxWhdKf7egKdVaMkMb0lFW0mpiB7GwzfTNycdp9Zo="
