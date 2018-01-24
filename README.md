@@ -7,6 +7,7 @@
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Maintainability](https://api.codeclimate.com/v1/badges/159fabcb277903962edb/maintainability)](https://codeclimate.com/github/andreyors/behat-bootstrap/maintainability)
 
 A Behat extension to automate init scripts for behat environment within Symfony 3 projects, i.e. preparing initial database state, cleaning redis cache and warming composer cache
 
