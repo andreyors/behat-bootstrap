@@ -5,7 +5,6 @@
 [![Total Downloads](https://poser.pugx.org/andreyors/behat-bootstrap/downloads)](https://packagist.org/packages/andreyors/behat-bootstrap)
 [![codecov](https://codecov.io/gh/andreyors/behat-bootstrap/branch/master/graph/badge.svg)](https://codecov.io/gh/andreyors/behat-bootstrap)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Maintainability](https://api.codeclimate.com/v1/badges/159fabcb277903962edb/maintainability)](https://codeclimate.com/github/andreyors/behat-bootstrap/maintainability)
 
