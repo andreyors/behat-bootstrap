@@ -1,6 +1,6 @@
 {
   "name": "andreyors/behat-bootstrap",
-  "type": "library",
+  "type": "behat-extension",
   "description": "Behat bootstrap extension",
   "license": "MIT",
   "autoload": {
