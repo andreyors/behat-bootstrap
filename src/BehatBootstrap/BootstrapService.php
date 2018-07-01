@@ -5,6 +5,9 @@ namespace AndreyOrs\BehatBootstrap;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 
 class BootstrapService {
+    /**
+     * @const
+     */
     const CONFIGURATION_KEY = 'bootstrap';
 
     /**
@@ -55,9 +58,9 @@ class BootstrapService {
         }
 
         foreach ($commands as $cmd) {
-            $cmd = \array_key_exists('command', $cmd) ? $cmd['command'] : false;
+            $cmd = \array_key_exists('command', $cmd) ? $cmd['command'] : null;
 
-            if ($cmd) {
+            if (null !== $cmd) {
                 shell_exec($cmd);
             }
         }

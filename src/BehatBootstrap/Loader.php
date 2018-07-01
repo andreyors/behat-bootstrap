@@ -16,7 +16,7 @@ class Loader implements Extension
 
     public function __construct()
     {
-        $this->service = new \AndreyOrs\BehatBootstrap\BootstrapService();
+        $this->service = new BootstrapService();
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace AndreyOrs\BehatBootstrap;
+namespace Tests\AndreyOrs\BehatBootstrap;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
+use AndreyOrs\BehatBootstrap\Loader;
 
 class LoaderTest extends \PHPUnit\Framework\TestCase
 {
