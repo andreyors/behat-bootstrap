@@ -23,8 +23,8 @@ A Behat extension to automate console operations in order to prepare environment
 ### Usage
 We usually need to prepare behat environment (create a fresh copy of db, clear the cache before, set up rabbitmq queues and exchanges)
 
-### Configuration
-```  
+### Copy and paste `behat.yaml` configuration
+```yaml
 extensions:
     AndreyOrs\BehatBootstrap\Loader:
       bootstrap:

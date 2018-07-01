@@ -15,10 +15,20 @@ before_script:
   - travis_retry composer self-update
   - travis_retry composer update $PREFER_LOWEST
 
-script: phpunit --coverage-text
+sudo: false
+
+script:
+  - phpunit --coverage-text
+  - composer outdated -D --strict
+  - php vendor/bin/phpcs src/ --standard=PSR2 -n
+  - composer require phpstan/phpstan --dev
+  - vendor/bin/phpstan analyze src --level=max
+  - composer remove phpstan/phpstan --dev
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 notifications: 
   email: false
