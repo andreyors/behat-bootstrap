@@ -22,7 +22,7 @@ class BootstrapService {
                     ->prototype('array')
                         ->beforeNormalization()
                             ->ifString()
-                                ->then(function ($v) {
+                                ->then(function($v) {
                                     return [
                                         'command' => $v,
                                     ];
