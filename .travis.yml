@@ -20,9 +20,6 @@ sudo: false
 script:
   - phpunit --coverage-text
   - php vendor/bin/phpcs src/ --standard=PSR2 -n
-  - composer require phpstan/phpstan --dev
-  - vendor/bin/phpstan analyze src --level=1
-  - composer remove phpstan/phpstan --dev
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
