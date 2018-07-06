@@ -34,3 +34,10 @@ extensions:
         - bin/console rabbitmq:setup-fabric -e test        
 ```
 
+### Tests
+```sh
+composer test
+```
+
+### License
+This library is released under the MIT license.
